@@ -1,0 +1,44 @@
+name:              twitter-favorite-image-stream
+version:           0.0.1
+license:           BSD3
+license-file:      LICENSE
+author:            Takahiro HIMURA
+maintainer:        Takahiro HIMURA <taka@himura.jp>
+category:          Web, Conduit
+stability:         Experimental
+cabal-version:     >= 1.10
+build-type:        Simple
+homepage:          https://himura.jp/gitlab/taka/twitter-favorite-image-stream
+
+description:
+  Download favorited image and save its metadatas.
+
+extra-source-files:
+  .gitignore
+  README.md
+
+source-repository head
+  type: git
+  location: https://himura.jp/gitlab/taka/twitter-favorite-image-stream.git
+
+executable download-favorite-images
+  main-is: main.hs
+  hs-source-dirs: .
+
+  build-depends:
+      base >= 4.0 && < 5
+    , transformers-base
+    , transformers
+    , monad-control
+    , lens
+    , bytestring
+    , text
+    , data-default
+    , resourcet
+    , conduit
+    , http-conduit
+    , monad-logger
+    , authenticate-oauth
+    , twitter-conduit
+
+  default-language: Haskell2010
