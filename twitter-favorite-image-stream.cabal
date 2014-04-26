@@ -31,10 +31,14 @@ executable download-favorite-images
     , transformers
     , monad-control
     , lens
+    , containers
+    , case-insensitive
+    , network
+    , filepath
+    , aeson
     , bytestring
     , text
     , data-default
-    , resourcet
     , conduit
     , http-conduit
     , monad-logger
